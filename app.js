@@ -32,7 +32,7 @@ app.post('/', (req, res) => {
   if(result == "spam"){
     spam = "This message is considered as spam.";
   } else {
-    notspam = "This message is not considerd as spam.";
+    notspam = "This message is not considered as spam.";
   }
 
   res.render('index', {
