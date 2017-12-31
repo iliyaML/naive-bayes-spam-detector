@@ -4,6 +4,9 @@ A *progressive web app* (PWA) that detects spam messages using the Naive Bayes a
 
 Demo: [Spam Detector](https://spamdetector.herokuapp.com/)
 
+![alt text](https://raw.githubusercontent.com/iliyaML/naive-bayes-spam-detector/master/splashpage.jpg "Splash Page")
+![alt text](https://raw.githubusercontent.com/iliyaML/naive-bayes-spam-detector/master/app.jpg "App Page")
+
 Since this is a PWA, you can even install it on your phone!
 
 The model was trained using from the [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/SMS+Spam+Collection) which can be found [here](https://github.com/iliyaML/naive-bayes-spam-detector/blob/master/spam_collection.txt).
