@@ -1,7 +1,7 @@
 {
-  "name": "naive-bayes-project",
+  "name": "naive-bayes-spam-detector",
   "version": "1.0.0",
-  "description": "",
+  "description": "A progressive web app (PWA) that detects spam messages using the Naive Bayes algorithm.",
   "main": "app.js",
   "scripts": {
     "start": "node app.js"

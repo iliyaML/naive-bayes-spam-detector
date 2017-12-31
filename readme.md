@@ -1,6 +1,6 @@
 Naive Bayes Spam Detector
 ======
-An app that detects spam messages using the Naive Bayes algorithm.
+A *progressive web app* (PWA) that detects spam messages using the Naive Bayes algorithm.
 
 Demo: [Spam Detector](https://spamdetector.herokuapp.com/)
 
