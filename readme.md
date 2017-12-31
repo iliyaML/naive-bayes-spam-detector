@@ -4,6 +4,8 @@ A *progressive web app* (PWA) that detects spam messages using the Naive Bayes a
 
 Demo: [Spam Detector](https://spamdetector.herokuapp.com/)
 
+Since this is a PWA, you can even install it on your phone!
+
 The model was trained using from the [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/SMS+Spam+Collection) which can be found [here](https://github.com/iliyaML/naive-bayes-spam-detector/blob/master/spam_collection.txt).
 
 Examples of the most common SMS scams in 2012:
@@ -20,3 +22,7 @@ Due to a new legislation, those struggling with debt can now apply to have it wr
 Our records indicate your Pension is under performing to see higher growth and up to 25% cash release reply PENSION for a free review. To opt out reply STOP
 
 Try them out [here](https://spamdetector.herokuapp.com/)!
+
+LightHouse Audit
+------
+![Lighthouse Audit](https://raw.githubusercontent.com/iliyaML/naive-bayes-spam-detector/master/naive-bayes-spam-detector-lighthouse-audit.PNG)
