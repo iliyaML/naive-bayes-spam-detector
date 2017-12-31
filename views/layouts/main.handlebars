@@ -1,48 +1,78 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Spam Detector">
-    <meta name="author" content="Iliya Mohamad Lokman">
+<html lang="en-US">
 
-    <title>Spam Detector</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Spam Detector">
+  <meta name="author" content="Iliya Mohamad Lokman">
 
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  <title>Spam Detector</title>
 
-    <!-- Custom styles for this template -->
-    <style>
-    body {
-  padding-top: 5rem;
-}
-.starter-template {
-  padding: 3rem 1.5rem;
-  text-align: center;
-}
-    </style>
-  </head>
+  <!-- Bootstrap core CSS -->
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
 
-  <body>
+  <!-- Custom styles for this template -->
+  <link href="/css/custom.css" rel="stylesheet">
 
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="/">Spam Detector</a>
-      </div>
-    </nav>
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="/img/icons/favicon.ico">
 
-    <main role="main" class="container">
-       {{> _result}}
+  <!-- Manifest -->
+  <link rel="manifest" href="/manifest.json">
 
-      {{{ body }}}
-    </main><!-- /.container -->
+  <!-- Meta -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="SpamDetector">
+  <meta name="apple-mobile-web-app-title" content="SpamDetector">
+  <meta name="theme-color" content="#343a40">
+  <meta name="msapplication-navbutton-color" content="#343a40">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="msapplication-starturl" content="/">
+
+  <!-- Icons -->
+  <link rel="icon" type="image/png" sizes="36x36" href="/img/icons/android-icon-36x36.png">
+  <link rel="apple-touch-icon" type="image/png" sizes="36x36" href="/img/icons/android-icon-36x36.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="/img/icons/android-icon-48x48.png">
+  <link rel="apple-touch-icon" type="image/png" sizes="48x48" href="/img/icons/android-icon-48x48.png">
+  <link rel="icon" type="image/png" sizes="72x72" href="/img/icons/android-icon-72x72.png">
+  <link rel="apple-touch-icon" type="image/png" sizes="72x72" href="/img/icons/android-icon-72x72.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/img/icons/android-icon-96x96.png">
+  <link rel="apple-touch-icon" type="image/png" sizes="96x96" href="/img/icons/android-icon-96x96.png">
+  <link rel="icon" type="image/png" sizes="144x144" href="/img/icons/android-icon-144x144.png">
+  <link rel="apple-touch-icon" type="image/png" sizes="144x144" href="/img/icons/android-icon-144x144.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/img/icons/android-icon-192x192.png">
+  <link rel="apple-touch-icon" type="image/png" sizes="192x192" href="/img/icons/android-icon-192x192.png">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="/">Spam Detector</a>
+    </div>
+  </nav>
+
+  <main role="main" class="container">
+    {{> _result}} {{{ body }}}
+  </main>
 
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-  </body>
+  <script>
+    // Service Worker
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('/sw.js').then(function (registration) {
+          // Registration was successful
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }, function (err) {
+          // registration failed :(
+          console.log('ServiceWorker registration failed: ', err);
+        });
+      });
+    }
+  </script>
+</body>
+
 </html>
